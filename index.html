@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDDIT POST MINER</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="background-grid"></div>
+    <div class="scanlines"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="glitch" data-text="REDDIT POST MINER">REDDIT POST MINER</h1>
+            <div class="status-bar">
+                <span class="status-item">SYSTEM: <span class="online">ONLINE</span></span>
+                <span class="status-item">NET: <span class="connected">CONNECTED</span></span>
+                <span class="status-item">PROTOCOL: RSS_V2</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="search-module">
+                <div class="input-wrapper">
+                    <span class="prompt">></span>
+                    <input type="text" id="searchInput" placeholder="ENTER QUERY..." autocomplete="off">
+                    <div class="input-border"></div>
+                </div>
+                <button id="searchBtn" class="cyber-btn">
+                    <span class="btn-text">INITIALIZE SCAN</span>
+                    <span class="btn-glitch"></span>
+                </button>
+            </div>
+
+            <div id="resultsArea" class="results-container hidden">
+                <div class="results-header">
+                    <h3>SCAN RESULTS</h3>
+                    <div class="loading-bar hidden" id="loadingBar">
+                        <div class="bar-fill"></div>
+                    </div>
+                </div>
+                <div id="resultsList" class="results-grid"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>LET US EXPLORE THE WORLD OF REDDIT</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+
+</html>

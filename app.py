@@ -3,6 +3,7 @@ from execution import fetch_search_rss
 from execution import parse_posts
 from execution import rank_posts
 import sys
+import os
 
 # Configure UTF-8 for console output
 sys.stdout.reconfigure(encoding='utf-8')
@@ -38,5 +39,7 @@ def search():
         print(f"Server Error: {e}", file=sys.stderr)
         return jsonify({"error": "Internal Server Error"}), 500
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
